@@ -1,0 +1,55 @@
+<!-- Create a form -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+
+  <body>
+    <form action="Exercise5.2.html" method="post">
+      <label for="description">Description: </label>
+      <input type="text" name="description" id="description" /><br /><br />
+      ​
+      <label for="termsOfUse">Agree</label>
+      <input type="checkbox" name="termsOfUse" id="termsOfUse" /><br /><br />
+      ​
+      <div>
+        <label for="opt1">Option 1</label>
+        <input name="opt" id="opt1" type="radio" />
+        <label for="opt2">Option 2</label>
+        <input name="opt" id="opt2" type="radio" />
+        <label for="opt3">Option 3</label>
+        <input name="opt" id="opt3" type="radio" />
+      </div>
+      <br />
+      ​
+      <label for="startDate">Start date</label>
+      <input type="date" name="startDate" id="startDate" /><br /><br />
+      ​
+      <label for="age">Age</label>
+      <input type="number" name="age" id="age" /><br /><br />
+      ​
+      <label for="fileUpload">CV:</label>
+      <input type="file" name="fileUpload" id="fileUpload" /><br /><br />
+
+      <textarea
+        cols="10"
+        rows="2"
+        name="message"
+        placeholder="Type something"
+      ></textarea
+      ><br /><br />
+
+      <select name="city">
+        <option selected="selected">Choose one</option>
+        <option value="value1">Tirana</option>
+        <option value="value2">Elbasani</option>
+        <option value="value3">Korça</option></select
+      ><br /><br />​
+      <button type="submit">Send</button>
+    </form>
+  </body>
+</html>

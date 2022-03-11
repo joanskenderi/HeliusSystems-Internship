@@ -1,0 +1,30 @@
+table,
+th,
+td {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+.redText {
+  color: red;
+}
+
+.redBackground {
+  background-color: rgb(255, 200, 215);
+}
+
+.blueText {
+  color: blue;
+}
+
+.greyBackground {
+  background-color: rgb(155, 155, 155);
+}
+
+.blueBackground {
+  background-color: rgb(120, 160, 230);
+}
+
+.lightBlueBackground {
+  background-color: rgb(215, 215, 215);
+}

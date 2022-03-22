@@ -123,11 +123,11 @@ table {
   text-align: justify;
 }
 
-div.elem-group {
+div.element {
   margin: 20px 0;
 }
 
-div.elem-group.inlined {
+div.element.inlined {
   width: 49%;
   display: block;
   float: left;
@@ -151,7 +151,7 @@ textarea {
   padding: 10px;
 }
 
-div.elem-group.inlined input {
+div.element.inlined input {
   width: 95%;
   display: inline-block;
 }

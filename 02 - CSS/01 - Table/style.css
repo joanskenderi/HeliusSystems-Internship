@@ -5,26 +5,26 @@ td {
   border-collapse: collapse;
 }
 
-.redText {
+.red-text {
   color: red;
 }
 
-.redBackground {
+.red-background {
   background-color: rgb(255, 200, 215);
 }
 
-.blueText {
+.blue-text {
   color: blue;
 }
 
-.greyBackground {
+.grey-background {
   background-color: rgb(155, 155, 155);
 }
 
-.blueBackground {
+.blue-background {
   background-color: rgb(120, 160, 230);
 }
 
-.lightBlueBackground {
+.light-blue-background {
   background-color: rgb(215, 215, 215);
 }

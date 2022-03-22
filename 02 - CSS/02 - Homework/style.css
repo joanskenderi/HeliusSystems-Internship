@@ -24,7 +24,7 @@
   background-color: gray;
 }
 
-.firstImage {
+.first-image {
   width: 270px;
   height: 270px;
   padding: 5px;
@@ -34,7 +34,7 @@
   box-sizing: content-box;
 }
 
-.secondImage {
+.second-image {
   width: 225px;
   height: 225px;
   padding: 30px;
@@ -47,7 +47,7 @@
   opacity: 0.9;
 }
 
-.threeImages {
+.three-images {
   display: inline-flex;
   flex-direction: columns;
   margin-left: 300px;

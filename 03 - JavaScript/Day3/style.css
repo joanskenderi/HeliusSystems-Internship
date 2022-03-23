@@ -1,0 +1,23 @@
+.red {
+  color: red;
+}
+
+.klasKot {
+  opacity: 0.2;
+}
+
+/* form */
+
+.form-div {
+  margin: 5px;
+  font-size: 12px;
+}
+
+.pretty {
+  border: 1px solid blue;
+  border-radius: 10px;
+}
+
+.blocked {
+  border-color: gray;
+}

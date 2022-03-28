@@ -1,0 +1,13 @@
+.pretty {
+  color: #ff00ff;
+  background-color: #2bd43f;
+}
+.main-form {
+  margin: 20 px;
+}
+
+.main-form input[name],
+.btn {
+  border: 1 px solid mediumseagreen;
+  border-radius: 5 px;
+}

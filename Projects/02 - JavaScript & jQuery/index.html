@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./jQuery/jquery.min.js"></script>
+    <title>Bus Company</title>
+  </head>
+
+  <header><p class="slogan">Bus Company</p></header>
+
+  <body>
+    <div class="intro">
+      <p class="title">About Us</p>
+      <p class="first-paragraph">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non ex placeat
+        voluptatibus! Optio, laboriosam nemo. Cumque distinctio nemo autem
+        deserunt eaque! Tenetur eius molestias, facilis placeat repellendus
+        enim. Enim, officiis? Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Non ex placeat voluptatibus! Optio, laboriosam nemo.
+        Cumque distinctio nemo autem deserunt eaque! Tenetur eius molestias,
+        facilis placeat repellendus enim. Enim, officiis?
+      </p>
+    </div>
+
+    <section>
+      <div class="reviews">
+        <div id="columns">
+          <blockquote>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+            vero repellat soluta, temporibus itaque, optio dolore dolor, quaerat
+            alias cumque maxime fugit! Similique, vitae! Veniam mollitia ut
+            recusandae qui optio.
+            <cite>Lorem</cite>
+          </blockquote>
+          <blockquote>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+            vero repellat soluta, temporibus itaque, optio dolore dolor, quaerat
+            alias cumque maxime fugit! Similique, vitae! Veniam mollitia ut
+            recusandae qui optio.
+            <cite>Lorem</cite>
+          </blockquote>
+          <blockquote>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+            vero repellat soluta, temporibus itaque, optio dolore dolor, quaerat
+            alias cumque maxime fugit! Similique, vitae! Veniam mollitia ut
+            recusandae qui optio.
+            <cite>Lorem</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <div class="table-start"><p>Our upcoming trips</p></div>
+
+    <div>
+      <table border="5">
+        <thead>
+          <tr>
+            <td id="date">Date</td>
+            <td id="departure">Departure</td>
+            <td id="layovers">Layovers</td>
+            <td id="arrival">Arrival</td>
+            <td id="days">Days</td>
+            <td id="nights">Nights</td>
+            <td id="price">Price</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="date">15.03.2022</td>
+            <td class="departure">Tirana</td>
+            <td class="layovers">2</td>
+            <td class="arrival">Korça</td>
+            <td class="days">4</td>
+            <td class="nights">5</td>
+            <td class="price">$$</td>
+          </tr>
+          <tr>
+            <td class="date">20.03.2022</td>
+            <td class="departure">Korça</td>
+            <td class="layovers">1</td>
+            <td class="arrival">Skopje</td>
+            <td class="days">2</td>
+            <td class="nights">1</td>
+            <td class="price">$</td>
+          </tr>
+          <tr>
+            <td class="date">22.03.2022</td>
+            <td class="departure">Skopje</td>
+            <td class="layovers">3</td>
+            <td class="arrival">Tirana</td>
+            <td class="days">1</td>
+            <td class="nights">0</td>
+            <td class="price">$$$</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div>
+      <p class="form-start">Fill the form if you want to book a seat</p>
+      <form action="" method="post">
+        <div class="element">
+          <label for="name">Full Name <span>*</span></label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your full name"
+            required
+          />
+        </div>
+
+        <div class="element">
+          <label for="email">E-mail <span>*</span></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+
+        <div class="element">
+          <label for="phone">Phone Number <span>*</span></label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter your phone number"
+            required
+          />
+        </div>
+
+        <label for="places">Starting destination</label>
+        <select name="places" id="places">
+          <option value="default">Choose a destination</option>
+          <option value="tirana">Tirana</option>
+          <option value="korca">Korça</option>
+          <option value="skopje">Skopje</option>
+        </select>
+
+        <div class="element inlined">
+          <label for="adult">Adults</label>
+          <p>
+            <input
+              type="number"
+              id="adult"
+              name="adult"
+              placeholder="Number of persons"
+              required
+            />
+          </p>
+        </div>
+
+        <div class="element inlined">
+          <label for="child">Children</label>
+          <p>
+            <input
+              type="number"
+              id="child"
+              name="child"
+              placeholder="Number of persons"
+              required
+            />
+          </p>
+        </div>
+
+        <div class="element">
+          <label for="child">Sa rruge?</label>
+          <input type="radio" class="ways" name="way" value="1" />
+          <label for="css">1 Way</label> <br />
+          <input type="radio" class="ways" name="way" value="2" />
+          <label for="css">2 Ways</label> <br />
+        </div>
+
+        <div class="element inlined">
+          <label for="checkin-date">Check-in Date</label>
+          <input type="date" id="checkin-date" name="checkin" required />
+        </div>
+
+        <div class="element inlined">
+          <label for="checkout-date">Check-out Date</label>
+          <input type="date" id="checkout-date" name="checkout" required />
+        </div>
+
+        <input type="button" value="Book Seats" />
+      </form>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>

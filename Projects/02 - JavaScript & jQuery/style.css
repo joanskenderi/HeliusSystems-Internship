@@ -1,0 +1,188 @@
+* {
+  background-color: #121212;
+  color: #fff;
+}
+
+body {
+  margin: 0 auto;
+  padding: 50px;
+}
+
+span {
+  color: red;
+}
+
+header .slogan {
+  font-size: 40px;
+  background-color: rgb(230, 230, 230);
+  color: #121212;
+  height: 50px;
+  margin: auto;
+  padding: auto;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 25px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.first-paragraph {
+  font-size: 15px;
+  margin: 15px;
+  background-color: transparent;
+}
+
+/* REVIEWS */
+blockquote {
+  font-size: 17px;
+}
+
+.reviews {
+  background-image: url(./img/bus.jpg);
+  height: 750px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+}
+
+#reviews {
+  text-align: center;
+}
+
+#columns {
+  width: 100%;
+  margin: 0 auto;
+}
+
+div#columns blockquote {
+  color: black;
+  text-align: left;
+  float: left;
+  width: 25%;
+  margin: 2%;
+  padding: 0px 2% 10px 2%;
+  height: 200px;
+  margin-top: 250px;
+  background-color: rgba(130, 130, 130, 0.7);
+  border-radius: 10px;
+}
+
+cite {
+  color: black;
+  font-weight: bold;
+  line-height: 200%;
+  background-color: transparent;
+}
+
+/* TABLE */
+.table-start {
+  font-size: 30px;
+  margin-top: 70px;
+  margin-bottom: -20px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+}
+
+#date,
+#departure,
+#layovers,
+#arrival,
+#days,
+#nights,
+#price {
+  text-align: center;
+  color: #121212;
+  background-color: rgb(172, 172, 172);
+  font-size: 20px;
+}
+
+.date,
+.departure,
+.layovers,
+.arrival,
+.days,
+.nights,
+.price {
+  text-align: center;
+  color: #121212;
+  background-color: rgb(230, 230, 230);
+  font-size: 18px;
+}
+
+/* FORM */
+.form-start {
+  font-size: 30px;
+  margin-top: 90px;
+  margin-bottom: -20px;
+  text-align: center;
+}
+form {
+  padding: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.intro {
+  font-size: 14px;
+  text-align: justify;
+}
+
+div.element {
+  width: 90%;
+  margin: 10px 0;
+}
+
+div.element.inlined {
+  width: 50%;
+  display: blocked;
+  float: left;
+}
+
+label {
+  font-size: 1.25em;
+  display: blocked;
+  padding-bottom: 20px;
+}
+
+input,
+select,
+textarea {
+  font-size: 1.25em;
+  border-radius: 2px;
+  border: 2px solid #777;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+div.element.inlined input {
+  width: 85%;
+  display: inline-block;
+}
+
+textarea {
+  height: 250px;
+}
+
+button {
+  font-size: 20px;
+  height: 40px;
+  background: #fff;
+  color: #121212;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 850px;
+}
+button:hover {
+  border: 2px solid gray;
+}

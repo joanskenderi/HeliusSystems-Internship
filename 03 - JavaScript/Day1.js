@@ -132,6 +132,7 @@ if (a === b) {
   alert("jo");
 }
 
+// kot per test 🔥
 // operatoret logjike && ||
 // funx alert
 // ciklet for / while / do while

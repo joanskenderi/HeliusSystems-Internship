@@ -123,11 +123,13 @@ table {
   margin-bottom: -20px;
   text-align: center;
 }
+
 form {
   padding: 40px;
   margin-left: 10px;
   margin-right: 10px;
 }
+
 .intro {
   font-size: 14px;
   text-align: justify;

@@ -32,5 +32,3 @@ function validateEmail($email) {
 }
 
 // Phone Number Validation
-
-// border i kuq if error

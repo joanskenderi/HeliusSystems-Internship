@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container well">
+      <h2 class="col-xs-offset-4">Application Form</h2>
+      <div class="alert alert-success" id="yes1">
+      Libri u shtua me sukses!
+      </div>
+      <div class="alert alert-warning" id="no1">
+        Warning
+      </div>
+      <form action="forma2.html" id="bookform" target="_blank">
+        <div class="form-group">
+          <label for="fn">Author: <span>*</span></label>
+          <input type="text" class="form-control" id="autori1" name="fn" />
+        </div>
+        <div>
+          <label for="" class="errorklasa" id="errorautori">Vendosni emrin e autorit</label>
+        </div>
+        <div class="form-group">
+          <label for="pwd">Book Name: <span>*</span></label>
+          <input type="text" class="form-control" id="bookname1" name="ln" />
+        </div>
+        <div>
+          <label for="" class="errorklasa" id="errorbook">Vendosni emrin e librit</label>
+        </div>
+        <div>
+        <div>
+          <div class="form-group col-xs-3 col-xs-offset-2">
+            <label for="pwd">Page No.</label>
+            <input type="number" class="form-control" id="pageno1" name="ln" />
+          </div>
+          <div>
+            <div class="form-group col-xs-3 col-xs-offset-2">
+              <label for="pwd">Year: <span>*</span></label>
+              <input type="number" class="form-control" id="year1" name="ln" />
+            </div>
+            <div>
+              <div class="form-group col-xs-2"></div>
+  </div>
+  <div>
+    <div class="col-xs-3 col-xs-offset-7">
+      <label for="" class="errorklasa" id="erroryear">Vendosni vitin
+      </label>
+    </div>
+  </div>
+        <div class="form-group col-xs-2 col-xs-offset-5">
+        <button type="button" class="btn btn-info btn-lg" id="btn1">Submit</button>
+        </div>
+
+
+
+      </form>
+    </div>
+  </body>
+  <script src="jquery.js"></script>
+<script>
+  let numri=0;
+  if(localStorage.getItem("numri")>1)
+  {
+    numri=parseInt(localStorage.getItem("numri"))
+  }
+  $(".errorklasa").hide()
+$("#yes1").hide()
+$("#no1").hide()
+
+
+
+$("#autori1").focusout(function(){
+    if (($("#autori1").val()==null) ||($("#autori1").val()==""))
+    {
+      $("#errorautori").show()
+    }
+    else
+    {
+      $("#errorautori").hide()
+
+    }
+})
+$("#bookname1").focusout(function(){
+    if (($("#bookname1").val()==null) ||($("#bookname1").val()==""))
+    {
+      $("#errorbook").show()
+    }
+    else
+    {
+      $("#errorbook").hide()
+
+    }
+})
+$("#year1").focusout(function(){
+    if (($("#year1").val()==null) ||($("#year1").val()=="")||($("#year1").val()<1800))
+    {
+      $("#erroryear").show()
+    }
+    else
+    {
+      $("#erroryear").hide()
+
+    }
+})
+
+$("#btn1").click(function () {
+  let autoribool=false;
+    if (($("#autori1").val()==null) ||  ($("#autori1").val()==""))
+    {
+      autoribool=false;
+    }
+    else
+    {
+      autoribool=true;
+
+    }
+    let bookbool=false;
+    if (($("#bookname1").val()==null) ||($("#bookname1").val()==""))
+    {
+      bookbool=false;
+    }
+    else
+    {
+      bookbool=true;
+    }
+    yearNo=$("#autori1").val();
+    yearbool=false;
+    if(yearNo<1800)
+    {
+      yearbool==true;
+    }
+    else
+    {
+      yearbool==false;
+    }
+   
+
+    if((bookbool==true)&&(autoribool==true)&&(yearbool==false))
+    {
+      numri=numri+1;
+      let libri={
+        autori: $("#autori1").val(),
+        emri: $("#bookname1").val(),
+        viti: $("#year1").val(),
+        faqe: $("#pageno1").val(),
+        id: numri
+      }
+      let value= JSON.stringify(libri)
+      localStorage.setItem("key"+numri, value)
+      $("#bookform").submit();
+      localStorage.setItem("numri", numri)
+    }
+    else
+    {
+      if(bookbool==false)
+      {
+        $("#errorbook").show()
+      }
+      else
+      {
+        $("#errorbook").hide()
+      }
+      if(autoribool==false)
+      {
+        $("#errorautori").show()
+      }
+      else
+      {
+        $("#errorautori").hide()
+      }
+      if(yearbool==true)
+      {
+        $("#erroryear").show()
+      }
+      else
+      {
+        $("#erroryear").hide()
+      }
+    }
+  });
+
+</script>
+
+
+</html>

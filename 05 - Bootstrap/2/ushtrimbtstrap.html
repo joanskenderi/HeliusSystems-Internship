@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container well">
+<div class="row">
+<div class="col-xs-6 col-xs-offset-4">
+<h1>Application Form</h1>
+</div>
+</div>
+<div class="row">
+<div id="success" class="alert alert-success">
+  <strong>Success!</strong> YOU JUST CLICKED "YES"
+</div>
+<div id="fail" class="alert alert-warning">
+  <strong>Fail!</strong> YOU JUST CLICKED "NO"
+</div>
+</div>
+<div class="row">
+<div class="form-group">
+    <label for="name">First Name</label>
+    <input type="text" class="form-control" id="name">
+  </div>
+  <div class="form-group">
+    <label for="surname">Last Name</label>
+    <input type="text" class="form-control" id="surname">
+  </div>
+  <div class="form-group">
+            <label>Job Experience</label>
+			<div>
+			<input name="opt" id="opt1" type="radio">
+			<label for="opt1">1-2y</label>
+			</div>
+			<div>
+			<input name="opt" id="opt2" type="radio">
+			<label for="opt2">2-5y</label>
+			</div>
+			<div>
+			<input name="opt" id="opt3" type="radio"> 
+			<label for="opt2">>5y</label>
+			</div>
+</div>
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Confirmation</h4>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" id="yes" data-dismiss="modal">Yes</button>
+		<button type="button" class="btn btn-default" id="no" data-dismiss="modal">No</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+</div>
+</body>
+<script>
+$(".alert").hide()
+
+$("#yes").click(function(){
+$("#success").show()
+$("#fail").hide()})
+
+$("#no").click(function(){
+$("#fail").show()
+$("#success").hide()})
+
+</script>
+</html>
+

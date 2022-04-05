@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript">
+      function createBook() {
+        var book = {
+          author: "Ismail Kadare",
+          title: "Keshtjella",
+          pages: 150,
+        };
+        sessionStorage.setItem("book1", JSON.stringify(book));
+      }
+      function showBook() {
+        var objAsString = sessionStorage.getItem("book1");
+        var bookAsObject = JSON.parse(objAsString);
+        alert(
+          "Libri: " + bookAsObject.title + ", autori: " + bookAsObject.author
+        );
+      }
+    </script>
+  </head>
+</html>

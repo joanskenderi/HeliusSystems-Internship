@@ -154,5 +154,3 @@ class Student{
     max=el.notat[i]
     }
     })
-
-// DOM (16mars)

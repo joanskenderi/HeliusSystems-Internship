@@ -13,8 +13,6 @@ console.log(document.querySelector("p.main"));
 // querySelectorAll
 console.log(document.querySelectorAll("p.main"));
 
-// METODA / FUNX PER TE MANIPULUAR INFORMACIONIN
-
 // createElement
 var el = document.createElement("span");
 var a = document.getElementById("some-id");

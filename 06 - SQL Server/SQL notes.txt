@@ -1,0 +1,331 @@
+# SQL Notes
+
+Tabela ne DB quhet entitet. Nje entitet perkthehet ne nje klase ne momentin qe shenojme kod (back end). Nje tabele ne DB perbehet nga rreshtat dhe kolonat. Secili rresht tregon nje objekt.
+
+Karakteristikat e tabeles dhe elementeve te saj:
+Nje tabele duhet te mbaje informacion vetem per nje entitet te caktuar.
+Secili rresht duhet te jete unik (jo informacion i dublikuar). Kjo behet me ane te Primary Keys.
+PK mund te jete ne nje ose disa kolona.
+
+Karakteristikat e PK:
+Eshte unike.
+Eshte autoinkrementale.
+Mund te jete int dhe best practice eshte te jete int.
+Nuk duhet te jete bosh (NULL) si vlere.
+
+Foreign Key (FK, Celesi Jashtem):
+Tregon dhe referon per nje tabele te caktuar.
+Tregon kush eshte rreshti mbi tabelen qe ai referon.
+Karakteristikat jane te njejta me ato te PK, por mund te kete dhe vlere NULL.
+Nuk mund te kete vlere te ndryshme nga ID.
+
+--- Day 2 ---
+
+Marredhenia 1 me 1 (1:1) / One to One, tregon qe nje rekord i tabeles se pare kap 1 rekord te tabeles se dyte dhe anasjelltas. Perdoret per zgjerim te informacionit baze (rast real).
+
+Marredhenia 1 me shume (1:n) / One to Many, tregon qe nje rekord i tabeles se pare kap disa rekorde te tabeles se dyte. Nje person mund te kete disa shtepi, pra adresa (rast real).
+
+Marredhenia shume me shume (m:n) / Many to Many, tregon qe disa rekorde te tabeles se pare kapin disa rekorde te tabeles se dyte. Nje person mund te kete disa shtepi, por edhe nje shtepi ka disa persona (rast real).
+
+Kur lidhen dy tabela me tabelen e ndermjetme, emri i tabeles se ndermjetme do te jete: emriTabelesPare_emriTabelesDyte_rel. Fjala "rel" qendron per relacionale.
+
+Disa parime per DB:
+Vendosim objektivat se per cfare duam ta ndertojme DB.
+Te shmanget dublikimi i te dhenave.
+Te shmangen empty fields (NULL). Ne kete rast krijohet marredhenia 1:1.
+Secila tabele (edhe te ndermjetmet) duhet te kene ID unike.
+
+--- Day 3 ---
+
+Komandat baze njihen si query. Nje query mund te perbehet nga shume instruksione.
+Migrim te dhenash quhet kalimi i te dhenave nga nje DB lokale ne nj DB operacionale (live), e cila do te perdoret nga shume kliente.
+Krijohet nje file me komandat qe kemi dhe ne fund do kemi nje kopje te tyren ne DB tjeter.
+
+Si ndodh procesi migritmit te te dhenave?
+Ne DB lokale eshte zhvilluar nje skeme relacionare. Kete DB duam ta kalojme ne nje DB tjeter per ta kaluar live (gati per perdorim). Nje menyre eshte krijimi i nje file tjeter (script) ne te cilin do te jene shkruar gjithe komandat. Menyra tjeter eshte procesi i backup dhe restore. Backup dmth qe DB do te ruhet ne nje format te caktuar lokalisht. Gjithe struktura e DB bashke me tabelat, userat edhe cdo gje tjeter nuk do te jete nje script por nje file qe mbaron me .backup.
+Restore eshte procesi i kundert i backup.
+
+Komandat e SQL ndahen ne 4 grupe:
+Data Definition Language (DDL) ka te beje me krijimin e strukturave te DB: CREATE (krijon) / ALTER (modifikon / ndryshon) / DROP (fshin tabelen ose kolonen).
+Data Manipulation Language (DML) -> SELECT (merr te dhenat) / INSERT (shton te dhenat) / UPDATE (ben update te dhenat) / DELETE (fshin te dhenat).
+Data Control Language (DCL) ka te beje me kontrollin ne server (psh te drejtat qe ka nje user ose administrator), mund te japesh te drejta user ne nivel DB, skeme(schema) ose nivel tabelar(table): -> GRANT (jep te drejtat) / REVOKE (heq te drejtat).
+Transaction Control Language (TCL) ka te beje me kontrollin e transaksioneve -> COMMIT (perfundim) / ROLLBACK (kthen nje veprim te kryer / nuk lejon perfundimin e nje veprimi te nisur).
+
+Serveri ka DB dhe DB ka skema. Skema default eshte dbo
+
+Pathi absolut i nje tabele lokale: ip.emriDB.schema.emri_tabeles
+ 
+tcl -> ka dy pjese: commit dhe rollback
+konfigurim qe by default eshte true -> AUTOCOMMIT -> pra cdo komande qe ekzekutohet do behet commit
+dy komanda qe behen fshehurazi (nuk i shofim) -> START TRANSACTION dhe COMMIT <- ndodh realisht kur ekzekutojme nje query
+commit dhe rollback vendosin se cfare do ndodhi me transaksionin pra mund ti besh commit ose rollback ne fund
+////////////////////
+
+ddl ->
+komanda e pare:
+CREATE DATABASE DBNAME
+
+SHIF DATATYPES NE MS SQL SERVER
+
+atributet qe perdorim jane atributet primary key dhe ne sintax shkruhen si ajo e null
+
+ID INT NOT NULL PRIMARY KEY
+NAME VARCHAR(20)
+DOB DATETIME
+
+AUTO_INCREMENT -> i shtohet kolones se ID ne fund
+ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT -> rritet me 1 vlera
+Ne rast se ID eshte inkrementale MOS e jep vleren e ID.
+
+DEFAULT ->
+
+INDEX -> i vendoset nje kolone per ta bere ate me te shpejte ne kerkim.
+
+Kolonat qe jane FK duhet te jene dhe me index.
+
+UNIQUE -> do kete vlera qe perseriten vetem 1 here brenda tabeles (PK eshte by default dhe nuk eshte nevoja te shenojme UNIQUE).
+
+DB do te ndertohet ne varesi te situates.
+
+INSERT -> pjesa e shtimit te informacionit ne DB
+INSERT INTO Klienti(ID, Name, DOB)
+VALUES(3, Joan, 2002)
+
+Ne rast se duam te shtojme vlera te tjera perdorim te njejten sintakse, por vendosim "," ne fund te cdo rreshti.
+INSERT INTO Klienti(ID, Name, DOB)  
+VALUES
+(3, Joan, 2002),
+(1, Marin, 2000)
+
+komanda UPDATE
+
+UPDATE Klienti
+SET Emri = 'x', DOB = 2002 (emri dhe data do jene me '')
+
+shtimi i kushteve behet me WHERE (kompozohet ne menyra te ndryshme ne varesi te situates)
+
+UPDATE Klienti
+SET Emri = 'x', DOB = 2002
+WHERE Emri = 'Joan' AND DOB > 2000
+
+komanda LIKE
+kur updateon gjith klienten qe emri ju fillon me jo
+UPDATE Klienti
+SET Emri = 'x', DOB = 2002
+WHERE Emri LIKE 'Jo%'
+
+NJe tj operator eshte BETWEEN
+UPDATE Klienti
+SET Emri = 'x', DOB = 2002
+WHERE DOB BETWEEN 2000 AND 2002
+
+Operatori IN
+UPDATE Klienti
+SET Emri = 'x', DOB = 2002
+WHERE DOB IN (2000,2001)
+
+komnanda DELETE
+DELETE FROM Klienti
+WHERE...
+
+//////////////// DATA 11 /////////////////////
+
+SELECT mund ta shikojme si koncept / fetch(menyra si funx engine)
+C -> CREATE
+R -> RETRIEVE
+U -> UPDATE
+D -> DELETE
+
+SELECT col1, col2, col3 FROM EmriTabeles -> selekton disa kolona nga tabela
+
+SELECT \* FROM EmriTabeles
+WHERE Mark_ID = 4,
+Vitprodhimi > 2000 AND
+EmriBicikletes LIKE '%Mount%'
+
+rasti si psh ne google kur info ndahet ne faqe njifet si paging ndersa koncepti ne kod njihet si blazing loading
+
+kjo ne DB eshte si komande: TOP 100 \* Table -> merr 100 elementet e pare nga tabela/ mund te jete cfaredo numri
+
+INNER JOIN ben bashkimin e tabelave dhe prerjen e tyre
+
+prerja e dy bashkesive rrethore njihet si inner join -> te marresh info nga tabela e pare e bashkuar me tabelen e 2 ku lidhen keto tabela
+ne kod: SELECT \* FROM Bike INNER JOIN Brand
+ON BikeBrand_ID = BrandID
+
+ALIAS ndihmon ne shfaqje dhe ben shkurtime ne tabela / riemertime te kolonave
+
+Per te berdorur vetem nje pjese si psh te majten perdorim vetem pjesen e majte te nje tabele perdorim:
+LEFT JOIN
+
+Pjesa e prerjes + info nga krahu i djathe:
+RIGHT JOIN
+
+Marrja e info per te gjitha rreshtat (nuk para perdoret):
+FULL JOIN
+
+inner outer join njifet si inner join ai shtimi (outer) eshte kot
+
+- Bej query i cili gjen gjithe dyqanet qe ndodhen ne qytetin e Tiranes.
+  -listo qytetet ku jetojne klientet tte cilet kane marre me qera makina nga dt 12 deri ne 20 korrik 2020 dhe fuqia motrorrike e makines qe eshte marre me qera nuk eshte me shume se 120\
+  renditi rezultatet sipas kostos me te madhe te qerase
+
+-join nuk mjafton me 2 tabela po duhet me 3
+
+nga me e vogla tek me e madhja njifet si ASC -> ashending
+nga me e madhja tek me e vogla njifet si DESC -> deshending
+
+-Te gjenden bicikletat te cilat mund te kene nje aksesor "burie" keto bikes duhet te jene me te medhaja se 25 dhe te shiten ne tirane
+
+Select Bicikleta.Emri from Biciklet_Aksesor_rel
+INNER JOIN Bicikleta
+ON Biciklet_Aksesor_rel.Biciklet_id = Bicikleta.id
+INNER JOIN Aksesor
+ON Biciklet_Aksesor_rel.Aksesor_id = Aksesor.id
+INNER JOIN Dyqane_Biciklet_rel
+ON Biciklet_Aksesor_rel.Biciklet_id = Dyqane_Biciklet_rel.Biciklet_id
+INNER JOIN Dyqane
+ON Dyqane.id = Dyqane_Biciklet_rel.Dyqan_id
+WHERE Bicikleta.Madhesia > 1.2 AND Aksesor.id = 5 AND Qytet_ID = 1
+
+provim krijim query me select join dhe ato qe do shofim ne vazhdim
+
+---------VAZHDIM dt13-----------------
+
+FUNX AGREGATE
+
+disa nga funx e gatshme qe ofron SQL jane:
+AVG(column) -> gjen mesataren e kolones.
+SELECT AVG(column) FROM table
+
+MIN(column) \ sintax e ngjashme si me larte
+MAX(column) /
+
+SUM(column) -> shumen e elementeve
+
+COUNT(emer kolone / \* qe numeron rreshtat)
+
+GROUP BY ->
+SELECT SUM(cost) FROM table
+GROUP BY Client_ID, purchase_date -> pas , vihet emri kolones(ne rastin e disa kolonave
+
+SELECT SUM(cost) FROM table
+GROUP BY Client_ID, purchase_date  
+HAVING SUM(cost) > 300 -> per klientet qe kan blere me shume mbi 300
+
+SELECT SUM(cost) FROM table
+GROUP BY Client_ID, purchase_date  
+HAVING COUNT(\*) > 1 -> sjell klientet qe kane me shume se 1 blerje (1 rresht) brenda grupit(tabeles)
+
+SELECT SUM(cost) FROM table
+WHERE cost > 200 -> per secilin rresht shef qe ka me shume se 200
+GROUP BY Client_ID, purchase_date
+
+nqs duam ti vendosim order, vendoset ne fund:
+SELECT SUM(cost) FROM table
+GROUP BY Client_ID, purchase_date  
+HAVING COUNT(\*) > 1  
+ORDER BY SUM(cost) -> ne order by vendoset mbi kolonat e selectuara apo ato qe ndodhen ne select
+
+te ndertohet nje raport(te behet select) i cili shfaq fuqine motorrike, modelin e makines dhe nr e hereve qe makina eshte rezervuar.
+te dhenat duhet te gruphoen sipas fuqise motorrike per gjithe makinat qe kane cmimin >= 300
+
+zgjidhja:
+SELECT horse_power, count(\*)from bookings INNER JOIN cars
+ON bookings.car_id=cars.car_id
+WHERE cars.price_per_day>300
+GROUP BY (horse_power)
+
+te gjendet lista e klienteve(id jo emri) qe kane rezervuar me shume sesa 2 makina dhe mesastarja e lekeve te shpenzuar nga keta kliente
+
+--nested queries ose selected nested
+nested queries perdoren kur zakonisht duhet te gjejme vlera qe jane me te medhaja sesa mesatarja e gjithe tabeles
+
+te gjenden ata studente qe i perkasin klases qe kane nr me te madh te studenteve
+
+kursori eshte si for each i sql, selekton te dhenat dhe per secilin rresht ekzekuton nje veprim te caktuar
+
+per te deklaruar paramaetrat perdorim DECLARE @p_product_name varchar(30); pra kemi deklaruar nje variabel me emrin p_product_name i cili eshte i tipit barchar
+@price decimal;
+
+DECLARE cursor_name CURSOR
+FOR SELECT product_name, price_list
+FROM product
+
+OPEN CURSOR_name
+
+FETCH NEXT INTO
+@p_product_name,
+@price
+
+WHILE
+@@Fetch_status = 0
+
+PRINT product_name + price
+
+FETCH NEXT INTO
+@p_product_name,
+@price
+
+END
+
+CLOSE cursor_name
+
+---
+
+DEALOCATE cursor_name -> ben pastrimin e memorjes nga kjo liste
+
+kursori eshte marrje info nga diku qe behet foreach ne cdo element
+
+variablat perdoren vetem ne runtime dhe fshihen nga memoria
+
+krijo kursor qe gjen nr e lexuesve per cdo liber ku autori i perket gjinise femerore
+krijo tabel: autor / liber autor(lidh liber me autor) / lexuesi (lidhet sh me sh) / skeda (rezervimet)
+
+----------------dt 14-----------
+
+VIEW
+
+VIEW eshte nje select qe ben ruajtjen e informacionit, pra ruajtjen e nje query per ta bere me te perdorshem.
+
+CREATE VIEW emri_view
+AS
+SELECT
+
+// rasti i detyres me bicikleta
+SELECT \* FROM emri_view
+WHERE qyteti = 'Tirane'
+
+Per ta modifikuar perdorim ALTER ne vend te CREATE
+
+PROCEDURAT
+
+procedurat jane nje pjese kodi e cila shkruhet ne SQL per te mundesuar ekzekutimin e disa komandave, me standarte eshte CRUD,
+create retrieve update delete.
+
+CREATE PROCEDURE emri_procedures
+@parameter1 AS int
+@parameter2 AS varchar(30)
+AS
+
+SELECT \* FROM table WHERE col1 = parameter 1
+AND col2 = parameter 2
+
+END
+
+EXE emri_procedures @parametri1 = 5, @parametri2 = 'klasa'
+
+krijo insert update delete dhe select
+
+sintakssa views: v*bicikleta_ashensor, pra me v*
+sintaksa procedurave: spc ose usp, pra spc_emri tabeles
+
+funksionet:
+
+CREATE FUNCTION emri(@p1 AS int, @p2 AS varchar(30))
+RETURNS int
+AS
+BEGIN
+statements
+RETURN
+END

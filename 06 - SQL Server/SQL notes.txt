@@ -307,7 +307,6 @@ CREATE PROCEDURE emri_procedures
 @parameter1 AS int
 @parameter2 AS varchar(30)
 AS
-
 SELECT \* FROM table WHERE col1 = parameter 1
 AND col2 = parameter 2
 

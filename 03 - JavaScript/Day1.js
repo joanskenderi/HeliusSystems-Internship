@@ -1,111 +1,6 @@
-// PRIMITIVE DATA TYPES
-// Number
-var number = 20;
-console.log(number);
-console.log(typeof number);
 
-// String
-var string = "Name";
-console.log(string);
-console.log(typeof string);
 
-// Boolean (only TWO values: True or False)
-var bool = true;
-console.log(bool);
-console.log(typeof bool);
 
-// Undefined
-var undefined;
-console.log(undefined);
-console.log(typeof undefined);
-
-// BigInt
-// Symbol
-
-// REFERENCE TYPES
-// Array
-const array = ["firstElement", "secondElement", "thirdElement"];
-console.log(array);
-console.log(typeof array);
-console.log(array instanceof Array);
-
-// Object
-const object = {
-  username: "randomUsername",
-  age: 20,
-  education: "School Name",
-};
-
-console.log(object);
-console.log(typeof object);
-
-console.log(username);
-console.log(typeof username);
-console.log(age);
-console.log(typeof age);
-console.log(education);
-console.log(typeof education);
-
-// Function
-function functionName() {
-  return;
-}
-console.log(typeof functionName);
-
-// Logical AND, OR, !
-const logicalA = true;
-const logicalB = false;
-console.log(a && a);
-console.log(a || b);
-console.log(a);
-console.log(b);
-
-// for loop
-for (let i = 0; i < 10; i++) {
-  console.log(i);
-}
-// while loop
-while (i < 10) {
-  text += "The number is " + i;
-  i++;
-}
-// do while loop
-do {
-  text += "The number is " + i;
-  i++;
-} while (i < 10);
-
-// Control Statement
-if (i < 1) {
-  console.log("The number is less than 1.");
-} else if (i > 2) {
-  console.log("The number is more than 1.");
-} else {
-  console.log("The number is 1.");
-}
-
-// Switch
-var number = 1;
-switch (number) {
-  case 1:
-    console.log("The number is 1.");
-    break;
-  case 2:
-    console.log("The number is 2.");
-    break;
-  case 3:
-    console.log("The number is 3.");
-    break;
-  case 4:
-    console.log("The number is 4.");
-    break;
-  case 4:
-  case 5:
-    console.log("The number is either 4 or 6.");
-    break;
-  default:
-    console.log("The number is not on the range from 1 to 6.");
-}
 
 /* EXERCISES */
 // Log to the console all numbers from 1 to 20
@@ -288,7 +183,7 @@ class Student {
     this.viti = viti;
     this.notat = [];
   }
-  
+
   set addGrade = (grade) => { //set do vendosesh nk ndikon ne result
     this.notat.push(grade)
     }

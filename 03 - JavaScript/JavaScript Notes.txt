@@ -32,6 +32,3 @@ nqs nuk perdorim var let ose const brenda nje funx ath ai variabel do te deklaro
 // TODO: this. Keyword
 // emriObj ["mbiemri"] eshte njesoj si emriObj.mbiemri
 // menyra me kriju obj
-
-
-kot per test 🔥

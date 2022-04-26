@@ -15,7 +15,7 @@ An object is the instance of a class.
 
 ---
 
-#### Namespace
+### Namespace
 
 Everything inside a namespace is referred to by the namespace, so in the case of using System we import everything inside the System.
 If we create a namespace we can import it into another file using using the namespaces name.

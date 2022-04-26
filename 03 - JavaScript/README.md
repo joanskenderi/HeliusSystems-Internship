@@ -1,16 +1,20 @@
-JavaScript Notes 
+# JavaScript
 
-var -> ben te mundur riinicializimin e nje variabli.
-let -> nuk lejon riinicializim (ES6).
+JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.
+
+---
+
+var -> ben te mundur riinicializimin e nje variabli. \
+let -> nuk lejon riinicializim (ES6). \
 const -> vlere e cila nuk do te ndryshohet (ES6).
 
 // var global dhe lokal
 
-Ne JavaScript objektet ekzistojne, por klasat jo.
-Ne rastin e switch, vlera qe vendoset te case eshte vlera qe do te kete variabli nqs i perket asaj case.
+Ne JavaScript objektet ekzistojne, por klasat jo. \
+Ne rastin e switch, vlera qe vendoset te case eshte vlera qe do te kete variabli nqs i perket asaj case. \
 
-== krahason vleren.
-=== krahason vleren dhe typen.
+== krahason vleren. \
+=== krahason vleren dhe typen. \
 
 Funksionet ne JavaScript jane methods ne gjuhet e tjera (Java, C#, etj)
 

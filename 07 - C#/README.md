@@ -5,6 +5,11 @@ It is case sensitive and every statement ends with ;.
 
 Comments in C # can be single line and multiline.
 
+Unlike JavaScript, C# is a compiled language.
+The compiler turns it into machine language and everything has to be syntactically flawed.
+
+Semantix error has to do with logic, while syntax error has to do with syntax.
+
 A class is the model of an entity.
 An object is the instance of a class.
 
@@ -33,51 +38,25 @@ To use console we should use the namespace System.
 Variables
 
 A variable is a reserved space in memory that is used to store certain information.
-Variables in C# are strongly typed and have this syntax:
+Names of the variables in C# are also known as identifiers.
+
+Variables in C# are strongly typed and case sensitive. They have this syntax:
 DataType variableName = value;
 
+Rules for naming variables:
+Variable names should be self descriptive.
+Variable names should be written in camelCase.
+Variable names can contain numbers or underscores but not spaces.
+Variable names shouldn't contain keywords.
+
 - The main types of variables are:
-  int -> positive integer
-  double -> floating point number
-  char -> character
-  string -> set of characters
-  bool -> boolean, takes only 2 values: true or false
-
-- Ways how variables are declared:
-
-Declaration and initialization:
-int mosha = 20;
-
-Declaration and then initialization:
-int mosha;
-mosha = 20;
-
-Overwriting the value of a variable:
-
-```
-int age;
-age = 20;
-Console.WriteLine(age); // The value 20 will be displayed
-```
-
-If we want to change the value of the variable:
-
-```
-age = 30;
-Console.WriteLine(age); // The value 30 will be displayed
-```
-
-Konstantet jane vlera te cilat nuk ndryshojne, pra jane read only dhe per te deklaruar dhe inicializuar nje te tille shkruajme:
-const int tvsh = 20;
-Nqs do te mundoheshim ta ndryshonim vleren e tvsh do te hidhej error.
-
-double cmimi = 12.51;
-char kot = 'D';
-string firstName = "Joan";
-
-Nje ndryshim midis karakter string jane thonjezat:
-char -> ' '
-string -> " "
+  int
+  long
+  double
+  decimal
+  char
+  string
+  bool
 
 ---
 
@@ -102,44 +81,6 @@ Console.WriteLine(c);
 ---
 
 bool isPaind = true
-
----
-
-si te deklarojme njekohesisht disa variabla.
-
-int a, b, c;
-
-ose me vlera
-
-int a=2;b=3;c;
-
-duhet ti perkasin te njejtit tip qe ti deklaorsh ne nje rresht
-
----
-
-emrat e variavlabe ne cs njihen si identifiers
-
--emrat e variablave duhet te jene kuptim plote, jo a, b, test, etj
-
-disa rreg per emrat e variablave jane:
-emri fillon me shkronje te vogel
-permban shkronja dhe numra
-nuk permban hapsier
-eshte kuptimplote (perdoret camelCase) psh:
-const int kostoMeTvsh = 20;
-
-emrat jane case sensitive.
-nuk mund te perdoresh keywords si emra. si psh int int = 1;
-
-shikojme me shume datatypes
-int
-long
-float
-double
-decimal
-
-int perdor 4 bytes ndersa long 8 bytes
-decimal eshte si float (nr me , qofshin ata pozitive ose negative)
 
 ---
 
@@ -174,9 +115,6 @@ KETO DY ME SIPER NUK QUHEN CASTING POR KONVERTIM
 ---
 
 string name = Console.PrintLine();
-
-C# eshte gjihe e kompilushme ndryshe nga js. pra kompilatori e kthen ne gjuhe makine dhe cdo gje duhet te jete e sakate nga ana sintaksore
-problemet logjike -> semantix error
 
 - ushtrim deklaro nje var int dhe nje name dhe afisho qe kerkon dhe lexon emer & mosh dhe afisoh emer mosh
   namespace firstApp

@@ -1,16 +1,16 @@
 # C#
 
 C # is an object-oriented high-level programming language (OOP). \
-It is case sensitive and every statement ends with ;. \
+It is case sensitive and every statement ends with ;.
 
 Comments in C # can be single line and multiline.
 
-Unlike JavaScript, C# is a compiled language.
+Unlike JavaScript, C# is a compiled language. \
 The compiler turns it into machine language and everything has to be syntactically flawed.
 
 Semantix error has to do with logic, while syntax error has to do with syntax.
 
-A class is the model of an entity.
+A class is the model of an entity. \
 An object is the instance of a class.
 
 ---

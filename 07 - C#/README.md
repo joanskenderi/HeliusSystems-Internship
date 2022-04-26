@@ -1,7 +1,7 @@
 # C#
 
-C # is an object-oriented high-level programming language (OOP).
-It is case sensitive and every statement ends with ;.
+C # is an object-oriented high-level programming language (OOP). \
+It is case sensitive and every statement ends with ;. \
 
 Comments in C # can be single line and multiline.
 

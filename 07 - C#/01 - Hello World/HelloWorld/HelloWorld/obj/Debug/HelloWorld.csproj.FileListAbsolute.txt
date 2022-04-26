@@ -1,0 +1,7 @@
+C:\Users\User\Desktop\Helius Systems Internship\07 - C#\01 - Hello World\HelloWorld\HelloWorld\bin\Debug\HelloWorld.exe.config
+C:\Users\User\Desktop\Helius Systems Internship\07 - C#\01 - Hello World\HelloWorld\HelloWorld\bin\Debug\HelloWorld.exe
+C:\Users\User\Desktop\Helius Systems Internship\07 - C#\01 - Hello World\HelloWorld\HelloWorld\bin\Debug\HelloWorld.pdb
+C:\Users\User\Desktop\Helius Systems Internship\07 - C#\01 - Hello World\HelloWorld\HelloWorld\obj\Debug\HelloWorld.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Helius Systems Internship\07 - C#\01 - Hello World\HelloWorld\HelloWorld\obj\Debug\HelloWorld.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Helius Systems Internship\07 - C#\01 - Hello World\HelloWorld\HelloWorld\obj\Debug\HelloWorld.exe
+C:\Users\User\Desktop\Helius Systems Internship\07 - C#\01 - Hello World\HelloWorld\HelloWorld\obj\Debug\HelloWorld.pdb

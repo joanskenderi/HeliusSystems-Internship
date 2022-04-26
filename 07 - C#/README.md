@@ -5,94 +5,75 @@ Komentet ne C# mund te jene single line dhe multiline.
 
 Klasa eshte model i nje entiteti dhe objekti eshte instanca e nje klase.
 
-using System; //system eshte emri i nje namespace ekzistues, ekziston sepse eshte e suportuar nga c# ose e krijuar nga ne
-namespace HelloWorld
-
-Ne nje kod ne C# ne rastin e using System, System eshte nje namespace ekzistues e cila eshte e krijuar dhe e suportuar nga gjuha.
 Cdo gje qe ndodhet brenda nje namespace referohet nga namespace, pra ne rastin e using System ne importojme cdo gje qe ndodhet brenda System.
 Nqs krijojme nje namespace tonen mund ta importojme ne nje file tjeter duke perdorur using dhe emrin e namespaces.
 Namespace eshte si tip folderi. Namespace eshte si tip containeri per te organizuar folderin.
 
 The namespace keyword is used to declare a scope that contains a set of related objects. You can use a namespace to organize code elements and to create globally unique types.
 
-class eshte keyword e cila deklaron nje klase te re.
-
----
-
-using System; //system eshte emri i nje namespace ekzistues, ekziston sepse eshte e suportuar nga c# ose e krijuar nga ne
-namespace HelloWorld
-{
-class Hello {  
- static void Main(string[] args) // metode
-{
-System.Console.WriteLine("Hello World!");
-}
-}
-}
-
-:: analizo komponentet e hello world, psh metoda main qe merr string si argumente
-per te printuar dicka ne console perdoret metoda writeline
-write shkr textin ne vijim(njera pas tj) ndersa writeline i shkruan ne rresht te ri
+ConsoleWrite vs ConsoleWriteLine
+Console.Write shkruan textin ne vijim ndersa Console.WriteLine shkruan cdo text te dhene ne rresht te ri.
 
 console eshte objekt si nje instance e klases system
 pra bejme using system qe te perdorim console.
 
-variablat ne CS
-tipet krysore te vatiablave jane:
-int -> integer -> nr i plote positive
-double -> nr me shifra pas presjes
-char - character -> karakter
-string -> grup karakteresh
-bool -> boolean -> true / false
+---
 
-variablaat ne CS jane strongly typed:
+Variabla eshete vend i rezervuar ne kujtese qe perdoret ber te bere store nje informacion te caktuar.
+Variablat ne CS jane strongly typed dhe kane kete sintakse:
 data type variableName = value;
-variabla eshete vend i rezervuar ne kujtese qe perdoret ber te bere store nje informacion te caktuar.
 
-mund te deklarosh edhe duke i dhene vetem tipin e te dhenes pa percaktuar vlere si psh:
-int mosha;
-deklaron val mosha dhe si jep vlere dhe eshste i tipit integer
-int mosha = 20;
-ketu eshte deklaruar dhe incializuar variabli
-deklarim eshte si me lart ndersa inicializim eshte dhenia e vleres "= 20".
+Tipet krysore te vatiablave jane:
+int -> nr i plote positive
+double -> nr me shifra pas presjes
+char -> karakter
+string -> grup karakteresh
+bool -> boolean, merr vetem 2 vlera: true ose false
 
-int mosha;
-mosha = 20;
+Menyrat se si deklarohen variablat:
 
-int mosha = 20;
-jane e njeetja gje
-te e para kemi deklarim pastaj inicializim, ndersta tek e dyta kemi deklarim dhe inicializim ne te njejten kohe
+- Deklaron dhe e inicializon variablin:
+  int mosha = 20;
+- Deklaron dhe me pas inicializon variablin:
+  int mosha;
+  mosha = 20;
 
-mund ti ndryshojme dhe vlere variablit
+Mbishkrimi i vleres se nje variabli:
+int age;
+age = 20;
+Console.WriteLine(age); // Do te afishohet vlera 20
 
-int mosha;
-mosha = 20;
+Ne rast se duam te ndryshojme vleren e variablit:
 mosha = 30;
+Console.WriteLine(age); // Do te afishohet vlera 30
 
-vlera mbishkruhet dhe eshte 30.
-
-per te deklaruar vl konstante ne perdorim
-
+Konstantet jane vlera te cilat nuk ndryshojne, pra jane read only dhe per te deklaruar dhe inicializuar nje te tille shkruajme:
 const int tvsh = 20;
-nk e modifikojme dot, nk na lejeon CS na jep error.eshte i tipit read only dhe nuk deklarohet dot pa i dhene vlere
+Nqs do te mundoheshim ta ndryshonim vleren e tvsh do te hidhej error.
 
 double cmimi = 12.51;
 char kot = 'D';
 string firstName = "Joan";
 
-ndryshim tj karakter string jane thonjezat ' ".
-
----cdo gje qe do shkr supozojme qe eshte brenda metodes main
-
-string name = "Joan";
-Console.WriteLine("Hello " + name);
-mbledhja e 2 strings (concatanation)
+Nje ndryshim midis karakter string jane thonjezat:
+char -> ' '
+string -> " "
 
 ---
 
-int a = 2
-int b = 3
-Console.WriteLine(a + b);
+cdo gje qe do shkr supozojme qe eshte brenda metodes main
+
+- U1
+  string name = "Joan";
+  Console.WriteLine("Hello " + name);
+  mbledhja e 2 strings (concatanation)
+
+---
+
+- U2
+  int a = 2
+  int b = 3
+  Console.WriteLine(a + b);
 
 ose i bejme store ne variable
 int c = a + b
@@ -142,8 +123,8 @@ decimal eshte si float (nr me , qofshin ata pozitive ose negative)
 
 ---
 
-casting
-2 forma: implicite(e nenkutpuar) ose ekspilicite (i themi gjuhes tani do besh casting!)
+- casting
+  2 forma: implicite(e nenkutpuar) ose ekspilicite (i themi gjuhes tani do besh casting!)
 
 casting implicit:
 int a = 9;
@@ -177,26 +158,26 @@ string name = Console.PrintLine();
 C# eshte gjihe e kompilushme ndryshe nga js. pra kompilatori e kthen ne gjuhe makine dhe cdo gje duhet te jete e sakate nga ana sintaksore
 problemet logjike -> semantix error
 
-// deklaro nje var int dhe nje name dhe afisho qe kerkon dhe lexon emer & mosh dhe afisoh emer mosh
-namespace firstApp
-{
-class Program
-{
-static void Main(string[] args)
-{
-int age;
-string name;
+- ushtrim deklaro nje var int dhe nje name dhe afisho qe kerkon dhe lexon emer & mosh dhe afisoh emer mosh
+  namespace firstApp
+  {
+  class Program
+  {
+  static void Main(string[] args)
+  {
+  int age;
+  string name;
 
-            Console.WriteLine("Vendosni emrin");
-            name = Console.ReadLine();
+              Console.WriteLine("Vendosni emrin");
+              name = Console.ReadLine();
 
-            Console.WriteLine("Vendosni moshen");
-            age = Convert.ToInt32(Console.ReadLine());
+              Console.WriteLine("Vendosni moshen");
+              age = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Ti je " + name + " dhe je " + age + " vjec.");
-            Console.Read();
-        }
-    }
+              Console.WriteLine("Ti je " + name + " dhe je " + age + " vjec.");
+              Console.Read();
+          }
+      }
 
 }
 
@@ -252,8 +233,8 @@ Math.Round(0.88); //rrumbullakosje
 
 ---
 
-// te lexohet kostot dhe te ardhurat nga useri, te llogaritet fitimi ose humbja ku fitimi = te ardhura - kosto.
-te afishohet nqs kompania ne fjale eshte ne fitim ose humbje dhe te afishohet nqs ka dale ne humbje dhe me cfare vlere
+- ushtrim 2 // te lexohet kostot dhe te ardhurat nga useri, te llogaritet fitimi ose humbja ku fitimi = te ardhura - kosto.
+  te afishohet nqs kompania ne fjale eshte ne fitim ose humbje dhe te afishohet nqs ka dale ne humbje dhe me cfare vlere
 
 namespace firstApp
 {
@@ -284,7 +265,7 @@ formaton kodin: CTRL + K + D
 
 ---
 
-metoda mbi strings
+- metoda mbi strings
 
 string name = "Joan";
 
@@ -336,7 +317,7 @@ duhet te jene patjt nr qe te mblidhen ne menyre matematikore
 
 ---
 
-kerkoji 2 nr perdoruesit dhe afisho nqs a esht nr i pare me i madh se i dyti dhe me pas afisho rezultatin
+- ushtrim 3 / kerkoji 2 nr perdoruesit dhe afisho nqs a esht nr i pare me i madh se i dyti dhe me pas afisho rezultatin
 
 namespace firstApp
 {

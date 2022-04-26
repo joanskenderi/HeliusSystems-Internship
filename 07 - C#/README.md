@@ -1,51 +1,71 @@
 # C#
 
-C# eshte gjuhe programimi e nivelit te larte e orientuar nga objektet (OOP). Ajo eshte case sensitive dhe cdo statement perfundon me ; .
-Komentet ne C# mund te jene single line dhe multiline.
+C # is an object-oriented high-level programming language (OOP).
+It is case sensitive and every statement ends with ;.
 
-Klasa eshte model i nje entiteti dhe objekti eshte instanca e nje klase.
+Comments in C # can be single line and multiline.
 
-Cdo gje qe ndodhet brenda nje namespace referohet nga namespace, pra ne rastin e using System ne importojme cdo gje qe ndodhet brenda System.
-Nqs krijojme nje namespace tonen mund ta importojme ne nje file tjeter duke perdorur using dhe emrin e namespaces.
-Namespace eshte si tip folderi. Namespace eshte si tip containeri per te organizuar folderin.
-
-The namespace keyword is used to declare a scope that contains a set of related objects. You can use a namespace to organize code elements and to create globally unique types.
-
-ConsoleWrite vs ConsoleWriteLine
-Console.Write shkruan textin ne vijim ndersa Console.WriteLine shkruan cdo text te dhene ne rresht te ri.
-
-console eshte objekt si nje instance e klases system
-pra bejme using system qe te perdorim console.
+A class is the model of an entity.
+An object is the instance of a class.
 
 ---
 
-Variabla eshete vend i rezervuar ne kujtese qe perdoret ber te bere store nje informacion te caktuar.
-Variablat ne CS jane strongly typed dhe kane kete sintakse:
-data type variableName = value;
+Namespace
 
-Tipet krysore te vatiablave jane:
-int -> nr i plote positive
-double -> nr me shifra pas presjes
-char -> karakter
-string -> grup karakteresh
-bool -> boolean, merr vetem 2 vlera: true ose false
+Everything inside a namespace is referred to by the namespace, so in the case of using System we import everything inside the System.
+If we create a namespace we can import it into another file using using the namespaces name.
 
-Menyrat se si deklarohen variablat:
+???Namespace is like a folder type.
+???Namespace is like a container type to organize the folder.
 
-- Deklaron dhe e inicializon variablin:
-  int mosha = 20;
-- Deklaron dhe me pas inicializon variablin:
-  int mosha;
-  mosha = 20;
+The namespace keyword is used to declare a scope that contains a set of related objects.
+You can use a namespace to organize code elements and to create globally unique types.
 
-Mbishkrimi i vleres se nje variabli:
+---
+
+Differences between ConsoleWrite and ConsoleWriteLine
+Console.Write writes the following text text in the same line while Console.WriteLine writes each given text in the new line.
+
+To use console we should use the namespace System.
+
+---
+
+Variables
+
+A variable is a reserved space in memory that is used to store certain information.
+Variables in C# are strongly typed and have this syntax:
+DataType variableName = value;
+
+- The main types of variables are:
+  int -> positive integer
+  double -> floating point number
+  char -> character
+  string -> set of characters
+  bool -> boolean, takes only 2 values: true or false
+
+- Ways how variables are declared:
+
+Declaration and initialization:
+int mosha = 20;
+
+Declaration and then initialization:
+int mosha;
+mosha = 20;
+
+Overwriting the value of a variable:
+
+```
 int age;
 age = 20;
-Console.WriteLine(age); // Do te afishohet vlera 20
+Console.WriteLine(age); // The value 20 will be displayed
+```
 
-Ne rast se duam te ndryshojme vleren e variablit:
-mosha = 30;
-Console.WriteLine(age); // Do te afishohet vlera 30
+If we want to change the value of the variable:
+
+```
+age = 30;
+Console.WriteLine(age); // The value 30 will be displayed
+```
 
 Konstantet jane vlera te cilat nuk ndryshojne, pra jane read only dhe per te deklaruar dhe inicializuar nje te tille shkruajme:
 const int tvsh = 20;

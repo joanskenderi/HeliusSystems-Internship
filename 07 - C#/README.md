@@ -62,17 +62,15 @@ Variable names shouldn't contain keywords.
 
 cdo gje qe do shkr supozojme qe eshte brenda metodes main
 
-- U1
-  string name = "Joan";
-  Console.WriteLine("Hello " + name);
-  mbledhja e 2 strings (concatanation)
+string name = "Joan";
+Console.WriteLine("Hello " + name);
+mbledhja e 2 strings (concatanation)
 
 ---
 
-- U2
-  int a = 2
-  int b = 3
-  Console.WriteLine(a + b);
+int a = 2
+int b = 3
+Console.WriteLine(a + b);
 
 ose i bejme store ne variable
 int c = a + b
@@ -105,7 +103,7 @@ ne kte rast int b do kishte vleren 3 -> humbje precizioni
 menyre tj behet me ane te metodave qe suportohen nga namespace system
 
 int a = 9;
-double b = Cpmvert.ToDouble(a);
+double b = Convert.ToDouble(a);
 
 double a = 3,57;
 int b = Convert.ToInt32(a)
@@ -115,29 +113,6 @@ KETO DY ME SIPER NUK QUHEN CASTING POR KONVERTIM
 ---
 
 string name = Console.PrintLine();
-
-- ushtrim deklaro nje var int dhe nje name dhe afisho qe kerkon dhe lexon emer & mosh dhe afisoh emer mosh
-  namespace firstApp
-  {
-  class Program
-  {
-  static void Main(string[] args)
-  {
-  int age;
-  string name;
-
-              Console.WriteLine("Vendosni emrin");
-              name = Console.ReadLine();
-
-              Console.WriteLine("Vendosni moshen");
-              age = Convert.ToInt32(Console.ReadLine());
-
-              Console.WriteLine("Ti je " + name + " dhe je " + age + " vjec.");
-              Console.Read();
-          }
-      }
-
-}
 
 ---
 

@@ -5,3 +5,10 @@ C:\Users\User\source\repos\NameAge\NameAge\obj\Debug\NameAge.csprojAssemblyRefer
 C:\Users\User\source\repos\NameAge\NameAge\obj\Debug\NameAge.csproj.CoreCompileInputs.cache
 C:\Users\User\source\repos\NameAge\NameAge\obj\Debug\NameAge.exe
 C:\Users\User\source\repos\NameAge\NameAge\obj\Debug\NameAge.pdb
+C:\Users\User\Desktop\Helius Systems Internship\07 - C#\02 - Name  and Age\NameAge\NameAge\bin\Debug\NameAge.exe.config
+C:\Users\User\Desktop\Helius Systems Internship\07 - C#\02 - Name  and Age\NameAge\NameAge\bin\Debug\NameAge.exe
+C:\Users\User\Desktop\Helius Systems Internship\07 - C#\02 - Name  and Age\NameAge\NameAge\bin\Debug\NameAge.pdb
+C:\Users\User\Desktop\Helius Systems Internship\07 - C#\02 - Name  and Age\NameAge\NameAge\obj\Debug\NameAge.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Helius Systems Internship\07 - C#\02 - Name  and Age\NameAge\NameAge\obj\Debug\NameAge.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Helius Systems Internship\07 - C#\02 - Name  and Age\NameAge\NameAge\obj\Debug\NameAge.exe
+C:\Users\User\Desktop\Helius Systems Internship\07 - C#\02 - Name  and Age\NameAge\NameAge\obj\Debug\NameAge.pdb

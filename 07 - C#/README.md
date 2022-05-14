@@ -277,3 +277,533 @@ static void Main(string[] args)
     }
 
 }
+
+--- shenime A ---
+Tenerary opertion
+
+---
+
+string key= vlera=="key"?"Po":"Jo";
+?=if
+:=else
+foreach (int el in V)
+console.WriteLine();
+--------------kjo eshte e njejte me kete por do te jete me e perdorshme
+for(int i=0; i<V.count;i++)
+console.WriteLine(V[i]);
+continue ben skip
+break ben daljen totale nga cikli
+VEKTORET(C# ARRAYS)
+
+---
+
+string[] Makina;
+Makina={"Benz","Opel","Toyota"};
+console.WriteLine(Makina[1]);
+Makina[0]="Hondo";//pra ketu kemi zv vleren e mkins ne poicionn 0 me emr Hondo
+per te afishuar te gjithe vetorin:
+foreach (string makina in Makina)//makina eshte nje el qe merr vleren e Makina sa here qe kalonne cikel
+console.WriteLine(makina);
+
+---
+
+Array.sort(Makina);//e rendit vektorin Mkina, pra thjesht modifikon vlerat brnd vektorit
+
+---
+
+LINQ//nje namespace qe ofron nje gr metodash qe ekzek mbi vektor
+using system Linq;
+Menyra 1 e deklarimit te vekt:
+int[] nums;
+nums=new{1,2,3};
+Menyra 2:
+int[] nums=new int[4];
+nums={1,2,3};
+Menyra 3:
+int[] nums={3,12,15,14,17,6}
+int max=nums.Max();
+int min=nums.Min();
+int sum=nums.Sum();
+var a=nums.ElementAt(1);//kthen elementin qe ndodhet ne poz 1 ne vektor
+=nums.First();//nese first eshte null, kthen error
+=nums.Last();
+
+int? a=2;//kjo nenkupton qe var a mund te marri dhe vleren NULL
+ose psh
+int? a=null;
+a=2;
+=nums.FirstOrDefault();//kur first eshte boshh jep qe var eshte null. ndryshe na first qe jep error
+=nums.LastOrDefault();
+
+---
+
+## LISTA
+
+List<int> nums=new List();
+nums.Add(1);
+nums.Add(12);
+per konvertim:
+
+---
+
+nums.ToList();
+nums.ToArray();//mos harro qe nums eshte thjesht emri i listes apo vektorit qe eshte marr per shembull nga siper
+
+---
+
+## Lambda Expression:
+
+List<int> nums2=nums.where(=> x>2);//x eshte si emer var qe mund ta quash edhe el psh; i selekton nr nga lista jone,ata qe jane me te medha se 2 dhe i vendos ne nje liste imagjinare
+.StartsWith("A");//psh kur duam te gjejme ato stringe qe fillojne me A
+vendoset ne fund gjithmone .ToList();
+
+--- shenime XH ---
+C#
+
+- struktura e kontrollit
+
+1. RASTI 1
+   if (kusht logjik) {
+   // kodi
+   }
+   else if {
+   // kodi
+   }
+   else {
+   // kodi
+   }
+2. RASTI 2
+   switch (variabel)
+   { case "alfa":
+   //kod;
+   break;
+   case "beta":
+   //kod;
+   break;
+   default:
+   //kod;
+   break;
+   }
+
+- kusht logjik:
+  && and
+  || or
+- Teneray operation
+  string vlera=console.ReadLine();
+  string key= vlera=="key" ? "Po" : "Jo";
+  ose
+  string key = string.empty;
+  if (vlera=="key")
+  key="Po";
+  else
+  key=Jo";
+  -Ushtrim, perdoruesi vendos nje nr nga 1 ne 7 dhe ne ekran afishohet nje emer i dites,
+  te kontrollohet nese n eshte nga 1-7, dhe te afishoje emrin
+  int nr;
+  Console.WriteLine("Vendosni nje nr nga 1-7");
+  nr = Convert.ToInt32(Console.WriteLine());
+  switch (nr)
+  {
+  case 1:
+  Console.WriteLine("E hene");
+  break;
+  case 2:
+  Console.WriteLine("E marte");
+  break;
+  case 3:
+  Console.WriteLine("E merkure");
+  break;
+  case 4:
+  Console.WriteLine("E enjte");
+  break;
+  case 5:
+  Console.WriteLine("E premte");
+  break;
+  case 6:
+  Console.WriteLine("E shtune");
+  break;
+  case 7:
+  Console.WriteLine("E diele");
+  break;
+  default:
+  Console.WriteLine("Ju lutem, vendosni nje numer nga 1 ne 7");
+  break;
+  }
+- Ciklet
+
+1. Cikli 1 - while
+   while (kushti)
+   {
+   // kodi
+   }
+   psh:
+   int nr=0;
+   while (nr<5)
+   { console.WriteLine(nr);
+   nr=nr+1;
+   }
+2. Cikli 2 - do while
+   do {
+   //kodi
+   }
+   while (kushti)
+3. Cikli 3 - for
+   for (statement 1; statement 2; statement 3)
+   // statement 1 inicializimi
+   // statement 2 kushti i ndalimit
+   // statement 3 menyra si ndryshon var i kontrollit
+   {
+   // kodi
+   }
+   psh:
+   for (int nr=0; nr<5; nr++)
+   { console.WriteLine (nr);
+   }
+4. Cikli 4 - foreach (kap secilin element pa patur nevoje per indekse)
+   for (int=0; i<V.count; i++)
+   console.WriteLine(V[i]);
+   foreach (int el in V)
+   console.WriteLine(el);
+
+- Statements
+  for (int=0; i<10; i++)
+  {
+  if (i==7)
+  continue; //ben skip
+  ose
+  break; //ben daljen nga cikli
+  console.WriteLine(i);
+- Vektoret (C# arrays)
+  percaktojme tipin e te dhenave qe mban vektori dhe me pas emrin:
+  string[] Makina;
+  Makina = new {"Benz", "Opel", "Toyota"};
+  ose
+  string[] Makina = {"Benz", "Opel", "Toyota"};
+  console.WriteLine(Makina[1]);
+  Makina[0]="Audi";
+  foreach (string makina in Makina)
+  console.WriteLine(makina);
+  ose
+  string [] Makina = new string [4]
+  Makina = {"Benz", "Opel", "Toyota"}
+  // Renditja e array ne rendin rrites pa kthyer rezultat
+  Array.Sort(Makina);
+- LINQ
+  nje namespace qe ofron nje grup metodash qe ekzekutohen mbi nje vektor
+  using System.Linq;
+  int [] nums={3, 12, 5, 6, 23, 1};
+  int max = nums.Max ();
+  int min= nums.Min ();
+  int sum= nums.Sum ();
+  // Metoda 1
+  var a = nums.ElementAt(1); //kthen vleren qe ndodhet ne pozicionin 1
+  // metoda 2
+  .First (); // kthen elementin e pare te vektorit
+  .Last(); // kthen elementin e fundit te vektorit
+  .FirstOrDefault(); //kur elementi i pare eshte bosh jep null jo error
+  psh:
+  int? a=null;
+  a=2;
+  //pra a mund te marri cdo lloj vlere dhe ate null
+  //metoda 3
+  .ToList //kur duam ta kthejme nga array ne list
+  .ToArray //kur duam ta kthejme nga list ne array
+  psh:
+  List<int> nums = new List<int>();
+  nums.Add(1);
+  nums.Add(12);
+  ose
+  List<int> nums = new List(1, 12, ..);
+  // metoda 4  
+  nums.where (Lambda expression)
+  nums.where (x => x>2); //filtron vlerat, vlerat me te medha se 2 ne nje list i kalon ne nje list imagjinare qe mund ta perdorim si nje list te re. x eshte emer variabli
+  List<string> m2 = Makina.where (p => p.StartsWith("A")); //gjen makinat qe i fillon emri me shkronjen A
+- Ushtrim
+  Jepen dy lista, mbushni listat me emra qytetesh nga perdoruesi, lista 1 ka 4 el dhe lista 2 ka 5 el. Afishoni qytetet ne te dyja listat.
+  static void Main(string[] args)
+  {
+  List<string> lista1 = new List<string>();
+  List<string> lista2 = new List<string>();
+  Console.WriteLine("Shkruaj emrat e qyteteve ne listen 1");
+  for (int i = 0; i < 4; i++)
+  lista1.Add(Console.ReadLine());
+  Console.WriteLine("Shkruaj emrat e qyteteve ne listen 2");
+  for (int i = 0; i < 5; i++)
+  lista2.Add(Console.ReadLine());
+  Console.WriteLine("Qytetet qe ndodhen ne te dyja listat jane:");
+  for (int i = 0; i < 4; i++)
+  {
+  for (int j = 0; j < 5; j++)
+  {
+  if (lista1.ElementAt(i) == lista2.ElementAt(j))
+  Console.WriteLine(lista1.ElementAt(i));
+  }
+  }
+  Console.ReadLine();
+  }
+- Ushtrim
+  Lexoni nga perdoruesi nje liste me emra. Afishoni te gjithe emrat qe filljne me A dhe kane me teper se 4 chars.
+  Te realizohet me dy menyra. menyra 1 me for dhe menyra 2 me linq.
+  {
+  List<string> emra = new List<string>();
+  Console.WriteLine("Shkruaj disa emra");
+  for (int i = 0; i < 4; i++)
+  emra.Add(Console.ReadLine());
+  List<string> emra2 = emra.Where(p => p.StartsWith("A") && p.Length >4).ToList();
+  for (int i = 0; i < 3; i++)
+  {
+  if (emra.ElementAt(i).StartsWith("A") && emra.ElementAt(i).Length > 4)
+  Console.WriteLine(emra.ElementAt(i));
+  }
+  }
+
+---- DITA 2 -----------
+
+- Metodat/Funksionet ne C#
+  Sintaksa:
+  static void MyMethod ()
+  { // deklarimi i metodes
+  Console.WriteLine("Afishim");
+  }
+  { //thirrja e metodes
+  MyMethod();
+  }
+  // () vendosen parametrat.
+  // static nenkupton qe metoda do te ekzekutohet nga klasa.
+  static void MyMethod2 (string fname) // (string fname) = parametri
+  {
+  Console.WriteLine("Emri: " + fname);
+  }
+  static void Main(string [] args)
+  { MyMethod2 ("Xhenis"); // ("Xhenis") = argumenti
+  string name=Console.ReadLine();
+  MyMethod2(name);
+  Console.ReadLine();
+  }
+- Parametrat me vleren default/opsionale. Parametrat opsional vendosen gjithmone ne fund, dhe ne fillim vendosen parametrat e tjere)
+  static void MyMethod2 (string fname="Xhenis")
+  nje metode e shkruar keshtu, sjell emrin e shkruar si argument, nese lihet () atehere do te merret vlera default ne parameter
+  static void MyMethod2 (string fname, string lname) //ndan parametrat me presje duke shkruar tipin e te dhenes dhe emrin.
+  {
+  Console.WriteLine("Emri: " + fname + " " + lname);
+  }
+  static void Main(string [] args)
+  { MyMethod2 ("Xhenis", "Zhara");  
+  string name=Console.ReadLine();
+  MyMethod2(name);
+  Console.ReadLine();
+  }
+  static void MyMethod2 (string fname, string lname, mosha=18, string vendlindja=" ")
+  {
+  Console.WriteLine("Emri: " + fname + " " + lname);
+  }
+  static void Main ()
+  { MyMethod2 ("Xhenis", "Zhara", 21);  
+  MyMethod2("Xhenis", "Zhara");
+  Console.ReadLine();
+  }
+
+---
+
+- Metodat qe kthejne rezultat.
+  static int Add5(int nr)
+  {
+  return nr+5;
+  }
+  static void Main (string [] args)
+  {
+  int rez = Add5(3);
+  }
+  ose
+  static int Add5(int nr)
+  {
+  int rez= nr+5;
+  return rez;
+  }
+
+---
+
+- Named arguments
+  argumentat qe e kane te caktuar emrat qe do te kene
+  {
+  string namee = Console.ReadLine();
+  MyMethod2 (lname: "Zhara",
+  mosha:20, fname: name);
+
+---
+
+- Method overloading. //diferencen e ben sasia e parametrave ose tipi i tyre
+  .. main (){
+  }
+  static void MyMethod ()
+  {
+  Console.WriteLine ("Hello World");
+  static void MyMethod (string fname)
+  {
+  Console.WriteLine (fname);
+  }
+
+---
+
+- Try Catch
+  static void MyMethod()
+  {
+  try
+  {
+  Console.WriteLine("Vendosni numrin e pare:");
+  int nr1 = Convert.ToInt32(Console.ReadLine());
+  Console.WriteLine("Vendosni numrin e dyte");
+  int nr2 = Convert.ToInt32(Console.ReadLine());
+  Console.WriteLine(nr1/nr2);
+  }
+  catch (Exception e)
+  {
+  Console.WriteLine("Error: " + e.Message);
+  }
+  }
+  static void Main(string[] args)
+  {
+  MyMethod();
+  Console.ReadLine();
+  }
+
+---
+
+- By reference
+  static void MyMethod ( ref string fname)
+  {
+  fname="Beni";
+  Console.WriteLine(fname);
+  }
+  static void Main (string[] args)
+  {
+  string name="Ana";
+  MyMethod (ref name);
+  Console.WriteLine(name);
+  }
+
+---
+
+- Ushtrim:
+  Lexoni nga perdoruesi dy numra, afishoni numrat me radhe qe u vendosen nga perdoruesi, shkembeni vlerat e ketyre numrave duke perdorur metode,
+  dhe afishoni variablat e ndryshuar.
+  static void MyMethod(ref int a, ref int b)
+  {
+  int c = a;
+  a = b;
+  b = c;
+  }
+  static void Main(string[] args)
+  {
+  Console.WriteLine("Vendosni numrin e pare: ");
+  int nr1 = Convert.ToInt32(Console.ReadLine());
+  Console.WriteLine("Vendosni numrin e dyte: ");
+  int nr2 = Convert.ToInt32(Console.ReadLine());
+  Console.WriteLine("Numri i pare: " + nr1 + "Numri i dyte: " + nr2);
+  MyMethod(ref nr1, ref nr2);
+  Console.WriteLine("Numri i pare: " + nr1 + "Numri i dyte: " + nr2);
+  }
+
+---
+
+- Ushtrim:
+  Shkruani dy vektore, emrat dhe nr e tyre, te ndertohet metoda qe merr si parametra dy vektore dhe nje nr te caktuar nr tel, metoda kthen emrin e personit qe ka
+  kete nr tel dhe nese nuk ka asnje me ate nr, atehere te dali nje mesazh qe nuk ka asnje person me kete numer.
+  static string MyMethod(string[] emrat, string[] numrat, string nr)
+  {
+  for (int i = 0; i < emrat.Length; i++)
+  {
+  if (numrat[i].StartsWith(nr))
+  return emrat[i];
+  }
+  return "Numri nuk i perket dikujt";
+  }
+  static void Main(string[] args)
+  {
+  string[] emrat = new string[2] { "Xhenis", "Anais" };
+  string[] numrat = new string[2] { "067", "0658" };
+  }
+  **ose**
+  static string emraNumra(string nr ,string[] emrat, string[] numrat)
+  {
+  for(int i = 0; i < emrat.Length; i++)
+  {
+  if (numrat[i].StartsWith(nr))
+  {
+  return emrat[i];
+  }
+  }
+  return "Nuk u gjet";
+  }
+  static void Main(string[] args)
+  {
+  string[] emrat = { "xhenis", "anais", "beni" };
+  string[] numrat = { "068571765", "0695124657", "0673244569" };
+  string nr = "068";
+  Console.WriteLine(emraNumra(nr , emrat , numrat));
+  Console.ReadLine();
+  }
+
+--- oop c# ---
+oop ne c#
+
+oop nenektupon qe menyra sesi programojme eshte qe fokusi kryesor eshte tek klasa dhe objekti.
+klasa eshte objekt i jetes reale pra nenkupton entitet te caktuar qe ka disa cilesi
+objekti eshte insnanca e nje klase
+instanca eshte shembull
+
+class Student {
+string name
+string ditelindja = "17.03.1996";
+string delta = "I E"
+decimal notaMesatare = 7.73;
+
+public void PrintData() { //kjo eshte metode jo field
+Console.WriteLine("Emri:" + emri + "Dega:" + dega);
+}
+}
+//atributet e klases me siper: name,ditelindja... quhen fields.
+
+static void Main(string[] args) {
+
+Student st = new Student();
+Console.WriteLine(st.name); // object.property
+
+Student st2 = new Student();
+Console.WriteLine(st2.name);
+}
+
+konstruktori eshte metode qe ska tip te dhene dhe perdoret per te inicializuar nje objekt
+
+nje objekt i ri bosh eshte konstruktor ne menyre explicite si psh:
+public Student() {
+}
+emri duhet te jete si emri klases
+
+konstruktori: public emriKlases() {}
+
+konstruktori eshte si nej metode qe ska parametra
+
+per te krijuar nje konstruktor me parametra duhet ti kalojme disa parametra
+parametrat kalohen per te mbushur property te brendshme te klases
+
+public Student(string dt, string emri, decimal nota, string dega) {
+emri = em;
+}
+
+fieldet per klasen jane si variabla
+
+public -> askeson kudo
+private -> akseson brenda klases
+protected -> brenda klases dhe atyre qe trashegon
+internal -> sdo e trajtojm
+
+mund te kemi disa konstruktore brenda nje klase
+
+Ushtrim:
+te krijohet klasa me emrin trekendesh
+kjo klase duhet te kete info per 3 brinjet e 3kendeshit
+ne kete klase duhet te llogaritet sip e 3kendeshit
+krijoni console app ku nqs user vendos 3 brinjete e 3kendeshit ju realizoni si fillim kontrollin, a mundet qe keto 3 brinje te perbejne
+nje 3kendesh dhe nqs po afisho sip e 3kendeshit
+sup qe 3 kendeshi eshte kenddrejte

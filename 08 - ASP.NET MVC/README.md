@@ -41,3 +41,25 @@ Detyre shpie->
 vendos debugger ne post shif ca kthen klasa si te dhena dhe provoni te hiqni dicka (do vije null). KJO BEHET PER TE PARE PROCESIN E BINDING
 
 DETYRA -> KUR TE KALOSH NE INDEX SHFAQ MSG SUCCESSI SI PSH "E MODIFIKUAT ME SUKSES STUDENTIN". ATA QE DO KENE KOHE TE BEJNE DHE SHTIMIN E STUDENTIT TE RI(KY ISHTE EDITIMI).
+
+AJAX eshte nje request midis front end dhe back end
+Request
+Get, Post
+Async, Sync
+nqs dergojme request nga front end(view) dhe dergojme thirrje ne controller; me sync pret pergjigjen dhe vazhdon punen, pra nuk le perdoryesin te beje asgje
+kur eshte async con kerkesen, perdoruesi ben cfare te doje dhe pergjigjia vjen me vone
+pergjigjet sync e bllokojne me shume browserin sepse do rrije loading dhe do jete me e bezdisshme per userin
+
+widgets quhet cdo gje qe mundeson lehtesimin e formes.
+
+kendo -> framework per frontend
+perdoret per dropdown list, datat dhe grids
+
+IIS -internet information service -> transferon ne web server, gui per te bere deploy ne windows
+
+filet assembly -> .dll
+nqs bejmbe build krijohen filet .dll ne bin
+
+certifikat SSL?
+
+connection string eshte menyre e te shkurar te te dhenave per databazen me te cilen do te lidhemi

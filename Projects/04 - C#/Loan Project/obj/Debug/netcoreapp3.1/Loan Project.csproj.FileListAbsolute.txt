@@ -1,0 +1,14 @@
+C:\Users\User\Desktop\Helius Systems Internship\Projects\04 - C#\Loan Project\bin\Debug\netcoreapp3.1\Loan Project.exe
+C:\Users\User\Desktop\Helius Systems Internship\Projects\04 - C#\Loan Project\bin\Debug\netcoreapp3.1\Loan Project.deps.json
+C:\Users\User\Desktop\Helius Systems Internship\Projects\04 - C#\Loan Project\bin\Debug\netcoreapp3.1\Loan Project.runtimeconfig.json
+C:\Users\User\Desktop\Helius Systems Internship\Projects\04 - C#\Loan Project\bin\Debug\netcoreapp3.1\Loan Project.runtimeconfig.dev.json
+C:\Users\User\Desktop\Helius Systems Internship\Projects\04 - C#\Loan Project\bin\Debug\netcoreapp3.1\Loan Project.dll
+C:\Users\User\Desktop\Helius Systems Internship\Projects\04 - C#\Loan Project\bin\Debug\netcoreapp3.1\Loan Project.pdb
+C:\Users\User\Desktop\Helius Systems Internship\Projects\04 - C#\Loan Project\obj\Debug\netcoreapp3.1\Loan Project.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Helius Systems Internship\Projects\04 - C#\Loan Project\obj\Debug\netcoreapp3.1\Loan Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Helius Systems Internship\Projects\04 - C#\Loan Project\obj\Debug\netcoreapp3.1\Loan Project.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Helius Systems Internship\Projects\04 - C#\Loan Project\obj\Debug\netcoreapp3.1\Loan Project.AssemblyInfo.cs
+C:\Users\User\Desktop\Helius Systems Internship\Projects\04 - C#\Loan Project\obj\Debug\netcoreapp3.1\Loan Project.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Helius Systems Internship\Projects\04 - C#\Loan Project\obj\Debug\netcoreapp3.1\Loan Project.dll
+C:\Users\User\Desktop\Helius Systems Internship\Projects\04 - C#\Loan Project\obj\Debug\netcoreapp3.1\Loan Project.pdb
+C:\Users\User\Desktop\Helius Systems Internship\Projects\04 - C#\Loan Project\obj\Debug\netcoreapp3.1\Loan Project.genruntimeconfig.cache

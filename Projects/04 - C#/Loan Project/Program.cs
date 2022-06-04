@@ -129,7 +129,6 @@ namespace Loan_Project
             mainLoan.PrintLoanData();
 
             Console.ReadKey();
-
         }
     }
 }

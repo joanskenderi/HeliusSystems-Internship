@@ -1,0 +1,7 @@
+C:\Users\User\Desktop\Helius CS\Loan App\Loan App\obj\Debug\Loan App.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Helius CS\Loan App\Loan App\obj\Debug\Loan App.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Helius CS\Loan App\Loan App\bin\Debug\Loan App.exe.config
+C:\Users\User\Desktop\Helius CS\Loan App\Loan App\bin\Debug\Loan App.exe
+C:\Users\User\Desktop\Helius CS\Loan App\Loan App\bin\Debug\Loan App.pdb
+C:\Users\User\Desktop\Helius CS\Loan App\Loan App\obj\Debug\Loan App.exe
+C:\Users\User\Desktop\Helius CS\Loan App\Loan App\obj\Debug\Loan App.pdb

@@ -1,0 +1,73 @@
+﻿@using ProjektInternship2022.MVC.Models
+@model Magazina
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="row">
+        @using (Ajax.BeginForm("Edit", "MagazinaController",
+                new AjaxOptions()
+                {
+                    InsertionMode = InsertionMode.Replace,
+                    UpdateTargetId = "content",
+                    OnSuccess = "window.history.pushState(null, '', '/Magazina/Index');"
+                }))
+        {
+            <fieldset class="well the-fieldset">
+                <legend class="the-legend"><span>Actions</span></legend>
+                <div class="pull-right">
+                    <button type="submit" name="Save" class="btn btn-primary btn-sm"><i class="glyphicon glyphicon-ok"></i> Save</button>
+                </div>
+            </fieldset>
+            <fieldset class="well the-fieldset">
+                <legend class="the-legend"><span>Creating new Task</span></legend>
+                <div class="form-horizontal row">
+                    <div class="form-group">
+                        <div class="col-xs-2 control-label">
+                            EmriN
+                        </div>
+                        <div class="col-xs-8">
+                            @Html.TextBoxFor(model => model.Emri, new { @class = "form-control input-sm" })
+                            @Html.ValidationMessageFor(model => model.Emri)
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-horizontal row">
+                    <div class="form-group">
+                        <div class="col-xs-2 control-label">
+                            Lloji
+                        </div>
+                        <div class="col-xs-8">
+                            @Html.TextBoxFor(model => model.Qyteti new { @class = "form-control input-sm" })
+                            @Html.ValidationMessageFor(model => model.Qyteti)
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal row">
+                    <div class="form-group">
+                        <div class="col-xs-2 control-label">
+                            Qyteti
+                        </div>
+                        <div class="col-xs-8">
+                            @(Html.Kendo().DropDownListFor(model => model.Qyteti)
+                                            .OptionLabel("Zgjidh Qytetin")
+                                            .DataTextField("Qyteti")
+                                            .DataValueField("Qyteti")
+                                            .DataSource(ds =>
+                                                ds.Read(read =>
+                                                {
+                                                    read.Action("GetMagazina", "MagazinaController");
+                                                })
+                                            )
+                            )
+                            @Html.ValidationMessageFor(model => model.Id)
+                        </div>
+                    </div>
+                </div>
+                @Html.HiddenFor(model => model.Id, new { Name = "Id" })
+            </fieldset>
+        }
+    </div>
+</div>
+<script src="~/Scripts/magazina/mag.js"></script>

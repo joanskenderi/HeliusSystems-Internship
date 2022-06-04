@@ -1,0 +1,40 @@
+﻿
+@model ModelStateDictionary
+
+@if (!Model.IsValid)
+{
+    <div id="validation_summary_errors" class="alert alert-danger fade in">
+        <a href="#" class="close" data-dismiss="alert">&times;</a>
+        <ul style="padding-left: 23px;">
+            @foreach (var modelError in
+                     Model.SelectMany(keyValuePair => keyValuePair.Value.Errors))
+            {
+                <li>
+                    @modelError.ErrorMessage
+                </li>
+            }
+        </ul>
+    </div>
+}
+
+@if (ViewData["Success"] != null)
+{
+    <div class="alert alert-success fade in">
+        <a href="#" class="close" data-dismiss="alert">&times;</a>
+        <strong><span class="glyphicon glyphicon-ok add-side-padding"></span></strong>&nbsp;@ViewData["Success"].ToString()
+    </div>
+}
+@if (ViewData["Error"] != null)
+{
+    <div class="alert alert-danger fade in">
+        <a href="#" class="close" data-dismiss="alert">&times;</a>
+        <strong><span class="glyphicon glyphicon-remove add-side-padding"></span></strong>&nbsp;@ViewData["Error"].ToString()
+    </div>
+}
+@if (ViewData["Alert"] != null)
+{
+    <div class="alert alert-warning fade in">
+        <a href="#" class="close" data-dismiss="alert">&times;</a>
+        <strong><span class="glyphicon glyphicon-warning-sign add-side-padding"></span></strong>&nbsp;@ViewData["Alert"].ToString()
+    </div>
+}

@@ -1,0 +1,43 @@
+﻿@using ProjektInternship2022.MVC.Models
+@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="row">
+        <fieldset class="well the-fieldset">
+            <legend class="the-legend"><span>Actions</span></legend>
+            <div class="pull-right">
+                <button type="button" id="btn_new" class="btn btn-primary btn-sm"><i class="glyphicon glyphicon-plus"></i> New</button>
+                <button type="button" id="btn_edit" class="btn btn-primary btn-sm"><i class="glyphicon glyphicon-pencil"></i> Edit</button>
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+@Html.Partial("_ValidationSummary", ViewData.ModelState)
+<div class="row">
+    <div class="row">
+        <div class="text-center">
+            <h2>List of tasks</h2>
+            @(Html.Kendo().Grid<EmployeeTask>()
+                .Name("TaskGrid")
+                .Columns(columns =>
+                {
+                    columns.Bound(c => c.TaskId).Hidden();
+                    columns.Bound(c => c.Summary).Width("50%");
+                    columns.Bound(c => c.Code).Width("20%");
+                    columns.Bound(c => c.DueDate).Width("20%").ClientTemplate("#= kendo.toString(DueDate, 'dd/MM/yyyy') #");
+                    columns.Bound(c => c.StatusId).Hidden();
+                })
+                .Selectable(selectable => selectable.Mode(GridSelectionMode.Single))
+                .Scrollable(scr => scr.Enabled(true).Height("auto"))
+                .DataSource(dataSource => dataSource
+                    .Ajax()
+                    .Read(read => read.Action("GetTasks", "Task"))
+                    .Sort(sort => { sort.Add(p => p.TaskId).Descending(); })
+                )
+            )
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/Task/Task.js"></script>
